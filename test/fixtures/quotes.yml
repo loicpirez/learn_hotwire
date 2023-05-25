@@ -1,8 +1,23 @@
-first:
-  name: First quote
+alan_turing:
+  name: "We can only see a short distance ahead, but we can see plenty there that needs to be done. - Alan Turing"
 
-second:
-  name: Second quote
+grace_hopper:
+  name: "The most dangerous phrase in the language is, 'We've always done it this way.' - Grace Hopper"
 
-third:
-  name: Third quote
+donald_knuth:
+  name: "Premature optimization is the root of all evil. - Donald Knuth"
+
+ada_lovelace:
+  name: "I am in no way prepared to give a scientific definition of the word 'algorithm'. - Ada Lovelace"
+
+dijkstra:
+  name: "Simplicity is a prerequisite for reliability. - Edsger Dijkstra"
+
+socrates:
+  name: "The only true wisdom is in knowing you know nothing. - Socrates"
+
+plato:
+  name: "Wise men speak because they have something to say; fools because they have to say something. - Plato"
+
+aristotle:
+  name: "It is the mark of an educated mind to be able to entertain a thought without accepting it. - Aristotle"
