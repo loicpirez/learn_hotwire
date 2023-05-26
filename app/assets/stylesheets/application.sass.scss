@@ -1,6 +1,7 @@
 @import "mixins/media";
 
 // Configuration
+@import "config/animations";
 @import "config/variables";
 @import "config/reset";
 
@@ -10,6 +11,7 @@
 @import "components/form";
 @import "components/visually_hidden";
 @import "components/quote";
+@import "components/flash";
 
 // Layouts
 @import "layouts/container";
