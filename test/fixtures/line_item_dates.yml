@@ -1,0 +1,7 @@
+today:
+  quote: alan_turing
+  date: <%= Date.current %>
+
+next_week:
+  quote: alan_turing
+  date: <%= Date.current + 1.week %>
