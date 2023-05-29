@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   resources :quotes do
-    resources :line_item_dates, except: %i[index show]
+    resources :line_item_dates, except: %i[index show] do
+      resources :line_items, except: %i[index show]
+    end
   end
 end
