@@ -1,7 +1,7 @@
 today:
-  quote: alan_turing
+  quote: kpmg_quote
   date: <%= Date.current %>
 
 next_week:
-  quote: alan_turing
+  quote: kpmg_quote
   date: <%= Date.current + 1.week %>

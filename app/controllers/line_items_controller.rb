@@ -24,7 +24,10 @@ class LineItemsController < ApplicationController
 
   def update
     if @line_item.update(line_item_params)
-      redirect_to quote_path(@quote), notice: 'Item was successfully updated.'
+      respond_to do |format|
+        format.html { redirect_to quote_path(@quote), notice: 'Item was successfully updated.' }
+        format.turbo_stream { flash.now[:notice] = 'Item was successfully updated.' }
+      end
     else
       render :edit, status: :unprocessable_entity
     end
@@ -32,7 +35,6 @@ class LineItemsController < ApplicationController
 
   def destroy
     @line_item.destroy
-
     respond_to do |format|
       format.html { redirect_to quote_path(@quote), notice: 'Date was successfully destroyed.' }
       format.turbo_stream { flash.now[:notice] = 'Date was successfully destroyed.' }
@@ -49,11 +51,11 @@ class LineItemsController < ApplicationController
     @quote = current_company.quotes.find(params[:quote_id])
   end
 
-  def set_line_item
-    @line_item = @line_item_date.line_items.find(params[:id])
-  end
-
   def set_line_item_date
     @line_item_date = @quote.line_item_dates.find(params[:line_item_date_id])
+  end
+
+  def set_line_item
+    @line_item = @line_item_date.line_items.find(params[:id])
   end
 end

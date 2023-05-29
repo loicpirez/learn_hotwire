@@ -51,8 +51,6 @@ class QuotesController < ApplicationController
   private
 
   def set_quote
-    # We must use current_company.quotes here instead of Quote
-    # for security reasons
     @quote = current_company.quotes.find(params[:id])
   end
 
